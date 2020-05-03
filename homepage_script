@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>UI small device</title>
+    <style>
+/* css untuk logo-toko */
+      #logoToko  {
+          width: 50%;
+          padding-right: 0 5px;
+      }
+
+      #logoToko img  {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+      }
+/* akhir css untuk logo-toko */
+
+/* css untuk alert */
+      .alert {
+          position: relative;
+          padding: 10px;
+          margin-bottom: 2px;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          background-color: #f9cc4e;
+      }
+/* akhir css untuk alert */
+
+/* css untuk semua class container */
+      .container {
+        padding: 0 5px;
+      }
+/* css untuk semua class container */
+
+/* comment untuk slide show */
+      .carousel-item img {
+        border-radius: 5px;
+      }
+/* comment untuk slide show */
+
+/* CSS UNTUK LAYANAN */
+      #menuLayanan {
+        padding-top: 10px;
+      }
+
+      #menuLayanan img {
+        width: 100%;
+        display: block;
+        padding: 10px;
+      }
+
+      #menuLayanan p {
+        text-align: center;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 5px;
+        font-size: 4vw;
+      }
+
+      #menuLayanan .col-sm-4 {
+        background-color: #f9cc4e;
+        width: 32%;
+        margin-right: .66%;
+        margin-left: .66%;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px grey;
+      }
+      #menuLayanan h5 {
+        text-align: center;
+      }
+
+      #menuLayanan .row {
+        padding-bottom: 10px;
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+/* AKHIR CSS UNTUK LAYANAN */
+
+/* CSS UNTUK MAKANAN */
+      #menuMakanan {
+        padding-top: 10px;
+      }
+
+      #menuMakanan img {
+        width: 100%;
+        margin-top: 1px;
+        border-radius: 10px;
+      }
+
+      #menuMakanan p {
+        text-align: center;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 0px;
+        font-size: 4vw;
+      }
+
+      #menuMakanan .col-sm-6 {
+        background-color: #f9cc4e;
+        width: 48%;
+        margin-right: 1%;
+        margin-left: 1%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      .col-sm-6 {
+        padding: 5px;
+      }
+      #menuMakanan h5 {
+        text-align: center;
+        font-size: 4vw;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+
+      #menuMakanan .harga {
+        float: left;
+      }
+      #menuMakanan svg {
+        float: left;
+        margin-top: 10px;
+      }
+
+      #menuMakanan .harga p {
+        float: center;
+        margin: 7px 20px 10px 20px;
+        font-weight: bold;
+      }
+
+      #menuMakanan .pesan {
+        float: right;
+      }
+
+      #menuMakanan .pesan p {
+        float: right;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+      }
+      #menuMakanan .pesan a {
+        font-size: 14px;
+      }
+      #menuMakanan .row {
+        margin-right: 0px;
+        margin-left: 0px; 
+      }
+/* AKHIR CSS UNTUK  MAKANAN */
+
+/* CLOSE BUTTON UNTUK MODAL */
+    .modal-header {
+      background-color: #f9cc4e;
+      height: 50px;
+      padding: 10px;
+    }
+    .modal-header .close {
+      background-image: url(https://image.flaticon.com/icons/svg/390/390914.svg);
+      height: 4px;
+      padding: 15px;
+      margin: 3px;
+      line-height: 1;
+      text-shadow: 0px;
+      opacity: 1;
+      }
+/* AKHIR CLOSE BUTTON UNTUK MODAL */
+
+/* CSS UNTUK MEMBUAT BUTTON KEMBALI KE ATAS */
+#atas {
+  position: fixed;
+  bottom: 4px;
+  right: 6px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  background-image: url(https://image.flaticon.com/icons/svg/753/753359.svg);
+  height: 40px;
+  width: 40px;
+}
+/* AKHIR CSS UNTUK MEMBUAT BUTTON KEMBALI KE ATAS */
+
+  </style>
+  </head>
+  <body>
+
+<!-- LOGO TOKO -->
+    <div id="logoToko" class="container">
+      <img src="https://3.bp.blogspot.com/-FOcokpYrqas/XDxFve1X2NI/AAAAAAAAOM8/_qNeJhQoUNcQkV5oCumit3eXvUa2p2RoQCK4BGAYYCw/s1600/logobaru.PNG" alt="logo_toko"> 
+    </div>
+<!-- AKHIR LOGO TOKO -->
+
+<!-- SLIDE SHOW -->
+<div id="slideShow" class="container">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="6"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://moondoggiesmusic.com/wp-content/uploads/2019/03/35e84674aaff2b7a8cdee644cef66a33.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mie Goreng</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.ytimg.com/vi/gffgdvDQ9PM/maxresdefault.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mie Kuah</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn2.tstatic.net/bali/foto/bank/images/indomie-instan_20170712_125455.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mie Bakar</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.resepmasakankreatif.com/wp-content/uploads/2016/12/Resep-asam-pedas-ikan-bawal.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mie Bakar</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn2.tstatic.net/pontianak/foto/bank/images/paket-iklan-nila-goreng-kremesasam-manis-es-teh-lemon-tea.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mie Bakar</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2018/12/28/47486367.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mie Bakar</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn2.tstatic.net/tribunnews/foto/bank/images/cara-menggoreng-ikan-agar-tidak-menempel-di-wajan.jpg " class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mie Bakar</h5>
+          </div>
+        </div>       
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Kembali</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Maju</span>
+      </a>
+    </div>
+</div>
+<!-- AKHIR SLIDE SHOW -->
+
+<!-- ALERT -->
+<div id="peringatan" class="container">
+  <h5 style="text-align: center; font-size: 18px; padding-top: 10px;"><strong>Layanan</strong></h5>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    Beberapa layanan di bawah ini kami sediakan untuk mempermudah Anda. Klik untuk me-<i>review</i> layanan.
+  </div>
+</div>
+</div>
+<!-- ALERT -->
+
+<!-- ALL LAYANAN-->
+<div id="menuLayanan" class="container">
+  <div class="row">
+    <div class="col-sm-4" href="#formPesan" data-toggle="modal">
+      <img src="https://image.flaticon.com/icons/svg/2836/2836500.svg">
+      <p>Makanan</p>
+    </div>
+    <div class="col-sm-4" href="#formPesan" data-toggle="modal">
+      <img src="https://image.flaticon.com/icons/svg/2836/2836587.svg">
+      <p>Minuman</p>
+    </div>    
+    <div class="col-sm-4" href="#formPesan" data-toggle="modal">
+      <img src="https://image.flaticon.com/icons/svg/2836/2836515.svg">
+      <p>Coffe</p>
+    </div>   
+  </div>
+  <div class="row">
+    <div class="col-sm-4" href="#formPesan" data-toggle="modal">
+      <img src="https://image.flaticon.com/icons/svg/2836/2836500.svg">
+      <p>Makanan</p>
+    </div>
+    <div class="col-sm-4" href="#formPesan" data-toggle="modal">
+      <img src="https://image.flaticon.com/icons/svg/2836/2836587.svg">
+      <p>Minuman</p>
+    </div>    
+    <div class="col-sm-4" href="#formPesan" data-toggle="modal">
+      <img src="https://image.flaticon.com/icons/svg/2836/2836515.svg">
+      <p>Coffe</p>
+    </div>   
+  </div>
+</div>
+<!-- AKHIR DARI ALL LAYANAN-->
+
+<!-- ALERT -->
+<div id="peringatan" class="container">
+  <h5 style="text-align: center; font-size: 18px; padding-top: 10px;"><strong>Makanan</strong></h5>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    Beberapa makanan di bawah ini kami sediakan untuk mempermudah Anda. Klik untuk me-<i>review</i> makanan.
+  </div>
+</div>
+<!-- ALERT -->
+
+<!-- all makanan-->
+<div id="menuMakanan" class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div><img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2018/12/28/47486367.jpg" class="card-img-top" alt="...">
+      </div>
+            <h5 class="card-title">Tempe Penyet</h5>
+
+          <div>
+            <div class="harga">
+                <svg class="bi bi-tag" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M.5 2A1.5 1.5 0 012 .5h4.586a1.5 1.5 0 011.06.44l7 7a1.5 1.5 0 010 2.12l-4.585 4.586a1.5 1.5 0 01-2.122 0l-7-7A1.5 1.5 0 01.5 6.586V2zM2 1.5a.5.5 0 00-.5.5v4.586a.5.5 0 00.146.353l7 7a.5.5 0 00.708 0l4.585-4.585a.5.5 0 000-.708l-7-7a.5.5 0 00-.353-.146H2z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M2.5 4.5a2 2 0 114 0 2 2 0 01-4 0zm2-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"/>
+              </svg>
+              <p>15.000</p>
+            </div>
+            <div class="pesan">
+              <p><a href="#formPesan" class="btn btn-danger" data-toggle="modal">Pesan</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+      <div><img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2018/12/28/47486367.jpg" class="card-img-top" alt="...">
+      </div>
+            <h5 class="card-title">Lalapan Mujair</h5>
+
+          <div>
+            <div class="harga">
+                <svg class="bi bi-tag" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M.5 2A1.5 1.5 0 012 .5h4.586a1.5 1.5 0 011.06.44l7 7a1.5 1.5 0 010 2.12l-4.585 4.586a1.5 1.5 0 01-2.122 0l-7-7A1.5 1.5 0 01.5 6.586V2zM2 1.5a.5.5 0 00-.5.5v4.586a.5.5 0 00.146.353l7 7a.5.5 0 00.708 0l4.585-4.585a.5.5 0 000-.708l-7-7a.5.5 0 00-.353-.146H2z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M2.5 4.5a2 2 0 114 0 2 2 0 01-4 0zm2-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"/>
+              </svg>
+              <p>45.000</p>
+            </div>
+            <div class="pesan">
+              <p><a href="#formPesan" class="btn btn-danger" data-toggle="modal">Pesan</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+      <div><img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2018/12/28/47486367.jpg" class="card-img-top" alt="...">
+      </div>
+            <h5 class="card-title">Lalapan Mujair</h5>
+
+          <div>
+            <div class="harga">
+                <svg class="bi bi-tag" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M.5 2A1.5 1.5 0 012 .5h4.586a1.5 1.5 0 011.06.44l7 7a1.5 1.5 0 010 2.12l-4.585 4.586a1.5 1.5 0 01-2.122 0l-7-7A1.5 1.5 0 01.5 6.586V2zM2 1.5a.5.5 0 00-.5.5v4.586a.5.5 0 00.146.353l7 7a.5.5 0 00.708 0l4.585-4.585a.5.5 0 000-.708l-7-7a.5.5 0 00-.353-.146H2z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M2.5 4.5a2 2 0 114 0 2 2 0 01-4 0zm2-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"/>
+              </svg>
+              <p>45.000</p>
+            </div>
+            <div class="pesan">
+              <p><a href="#formPesan" class="btn btn-danger" data-toggle="modal">Pesan</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+      <div><img src="https://asset-a.grid.id/crop/0x0:0x0/700x465/photo/2018/12/28/47486367.jpg" class="card-img-top" alt="...">
+      </div>
+            <h5 class="card-title">Lalapan Mujair</h5>
+
+          <div>
+            <div class="harga">
+                <svg class="bi bi-tag" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M.5 2A1.5 1.5 0 012 .5h4.586a1.5 1.5 0 011.06.44l7 7a1.5 1.5 0 010 2.12l-4.585 4.586a1.5 1.5 0 01-2.122 0l-7-7A1.5 1.5 0 01.5 6.586V2zM2 1.5a.5.5 0 00-.5.5v4.586a.5.5 0 00.146.353l7 7a.5.5 0 00.708 0l4.585-4.585a.5.5 0 000-.708l-7-7a.5.5 0 00-.353-.146H2z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M2.5 4.5a2 2 0 114 0 2 2 0 01-4 0zm2-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"/>
+              </svg>
+              <p>45.000</p>
+            </div>
+            <div class="pesan">
+              <p><a href="#formPesan" class="btn btn-danger" data-toggle="modal">Pesan</a></p>
+            </div>
+        </div>
+    </div>
+  </div> 
+</div>
+<!-- akhir all makanan-->
+
+<!-- form pemesanan-->
+    <div id="formPesan" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="color: #000;">Form Pemesanan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="pesanan" width="100%" height="780" src="https://docs.google.com/forms/d/e/1FAIpQLSeNSESjEnQdRyg4FG6vkhjjWPlrfqkzpwCuZkcLpVOOEZGjLQ/viewform?embedded=true" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- form pemesanan-->
+
+<!-- membuat button untuk kembali ke bagian atas -->
+  <button onclick="topFunction()" id="atas" title="Ke Atas"></button>
+<!-- membuat button untuk kembali ke bagian atas -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+// js untuk modal   
+        $(document).ready(function(){
+
+      var url = $("#pesanan").attr('src');
+      
+      $("#formPesan").on('hide.fp.modal', function(){
+          $("#pesanan").attr('src', '');
+      });
+      
+      $("#formPesan").on('show.fp.modal', function(){
+          $("#pesanan").attr('src', url);
+      });
+    });
+// js untuk modal 
+
+// js untuk back to top button 
+    mybutton = document.getElementById("atas");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+// akhir dari js untuk back to top button 
+    </script>
+  </body>
+</html>
